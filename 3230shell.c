@@ -41,7 +41,7 @@ int is_exit(char *cmd[]) {
 void input(char str[], char *cmd[]) { 
     cmd[0] = NULL;
     // prints the shell prompt
-    printf("$$ 3230shell ## ");
+    printf("$$ Cshell ## ");
     
     // stores the user input line
     fgets(str, MAX_CHAR, stdin);
@@ -117,7 +117,7 @@ void signal_handler(int signum) {
     }
     if (signum == SIGINT) {
         if (fork() == 0) {
-            printf("\n$$ 3230shell ## ");
+            printf("\n$$ Cshell ## ");
             exit(0);
         }
         else {
@@ -192,18 +192,18 @@ int main() {
             // if the valid program's path is not found
             if (error == -1) {
                 if (is_exit(cmd) == 1) { // if exit has arguments afterwards
-                    printf("3230shell: \"exit\" with other arguments!!!\n");
+                    printf("\shell: \"exit\" with other arguments!!!\n");
                 }
                 else { // otherwise
                     if (is_timeX(cmd) == 1) {
-                        printf("3230shell: \"timeX\" cannot be a standalone command\n");
+                        printf("Cshell: \"timeX\" cannot be a standalone command\n");
                     }
                     else {
                         if (is_timeX(cmd) == 0) {
-                            printf("3230shell: '%s': No such file or directory\n", cmd[1]);
+                            printf("Cshell: '%s': No such file or directory\n", cmd[1]);
                         }
                         else {
-                            printf("3230shell: '%s': No such file or directory\n", cmd[0]);
+                            printf("Cshell: '%s': No such file or directory\n", cmd[0]);
                         }
                     }
                 }                
