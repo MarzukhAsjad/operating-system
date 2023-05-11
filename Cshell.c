@@ -192,7 +192,7 @@ int main() {
             // if the valid program's path is not found
             if (error == -1) {
                 if (is_exit(cmd) == 1) { // if exit has arguments afterwards
-                    printf("\shell: \"exit\" with other arguments!!!\n");
+                    printf("Cshell: \"exit\" with other arguments!!!\n");
                 }
                 else { // otherwise
                     if (is_timeX(cmd) == 1) {
