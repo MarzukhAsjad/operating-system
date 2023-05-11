@@ -1,5 +1,4 @@
 // Development platform: Windows
-// Remark: everything except pipe(|) and background(&) has been implemented
 
 // Libraries to include
 #define _GNU_SOURCE
